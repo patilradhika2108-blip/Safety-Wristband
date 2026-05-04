@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "ChildTracker",
+    "slug": "childtracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF4D6D"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.childtracker.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs your location to track your child's safety.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs your location to track your child's safety even when the app is in background.",
+        "UIBackgroundModes": ["location", "fetch", "remote-notification"]
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyBKnSCTj_RlFLGo1zr5WwDtcZ6GwMuX_P0"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF4D6D"
+      },
+      "package": "com.childtracker.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBKnSCTj_RlFLGo1zr5WwDtcZ6GwMuX_P0"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow ChildTracker to use your location for child safety tracking."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF4D6D"
+        }
+      ]
+    ]
+  }
+}
